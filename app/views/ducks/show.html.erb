@@ -1,0 +1,6 @@
+<p>Ducky Name: <%= @duck.name %></p>
+<p>Ducky Description: <%= @duck.description %></p>
+<p>Owned by: <%= @duck.student.name %></p>
+
+
+<%= link_to "Edit This Ducky", edit_duck_path(@duck)%>
