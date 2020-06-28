@@ -1,0 +1,9 @@
+<h1> Flatiron Database </h1>
+<h5> Your requested students name </h5>
+<p> <%= @student.name %> </p>
+
+<h5> Ducks owned by this student: </h5>
+<% @student.ducks.each do |duck| %> 
+	<%= duck.name %>,
+<% end %> 
+
