@@ -1,0 +1,15 @@
+<h1>Duck Show Page</h1>
+
+<li><strong>Name: </strong><%= link_to @duck.name, duck_path %></li>
+<li><strong>Description: </strong><%= @duck.description %></li>
+ 
+  <li><strong>Duck Owner: </strong><%= @duck.student_name if @duck.student %>No Owner!</li>
+  
+<% if @duck.student.nil?%>
+  <%= button_to "Take Me Home!", edit_duck_path(@duck), :method => :get %>
+<% end %>
+
+<%= button_to "Edit Duck", edit_duck_path(@duck), :method => :get %>
+<% if @duck.student %>
+  <%= button_to "Show Me All My Ducks", student_path(@duck.student), :method => :get %>
+<% end %>
