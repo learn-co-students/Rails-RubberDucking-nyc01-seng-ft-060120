@@ -1,0 +1,10 @@
+
+<h2>Name: <%= @duck.name%></h2>
+<p>Description: <%= @duck.description%></p>
+<%# need to figure out how to put associations to student here %>
+
+<%= link_to "Edit This Duck", edit_duck_path(@duck) %>
+
+<%= link_to "Enter A New Duck", new_duck_path(@duck) %>
+
+<%= link_to "Index Page", ducks_path %>
