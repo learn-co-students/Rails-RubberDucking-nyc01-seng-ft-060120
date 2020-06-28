@@ -1,0 +1,9 @@
+<%= @student.name %>
+<p>Mod: <%= @student.mod %></p>
+
+<h4>Ducks Owned: </h4>
+<% @student.ducks.each do |duck| %>
+<p><%= link_to duck.name, duck_path(duck) %></p>
+<% end %>
+
+<%= link_to "Edit This Student", edit_student_path(@student) %>
