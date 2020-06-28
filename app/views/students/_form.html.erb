@@ -1,0 +1,11 @@
+<h1>New Student Form</h1>
+<%= form_for @student do |d|%>
+
+<%= d.label :name  %>
+<%= d.text_field :name  %>
+
+<%= d.label :mod %>
+<%= d.select :mod, (1..5)  %>
+
+<%= d.submit "Create Account To Obtain Ducks" %>
+<% end %>

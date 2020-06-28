@@ -1,0 +1,14 @@
+
+
+<strong>Name: </strong><%= @duck.name %> <br>
+<strong>Description: </strong><%= @duck.description %>
+<br>
+<p>Find Your Name to Claim Duck</p>
+<%= form_for @duck do |d| %>
+  <%= d.collection_select :student_id, Student.all, :id, :name %>   
+  <%= d.submit "Claim Duck" %>
+<% end %>
+
+<p>Don't see your name?</p>
+<%= button_to "Sign Me Up So I Can Have Ducks!", new_student_path, :method => :get %>
+

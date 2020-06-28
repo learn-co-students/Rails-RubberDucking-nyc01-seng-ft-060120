@@ -1,0 +1,10 @@
+<h3><strong>Name: </strong><%= @student.name %> |  <strong>Mod: </strong><%= @student.mod %></h3> 
+<% @student.ducks.each do |d| %>
+  <h3><strong>Duck Name: </strong><%= link_to d.name, duck_path(d) %></h3>
+  <h3><strong>Duck Details:  </strong><%= d.description %></h3> <br>
+<% end %>
+<% if @student.ducks.empty? %>
+  <p>You don't have any ducks!</p>
+  <%= button_to "Show me the ducks!", ducks_url, :method => :get %>
+<% end %>
+
