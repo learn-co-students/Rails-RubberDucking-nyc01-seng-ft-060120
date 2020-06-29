@@ -1,0 +1,7 @@
+<h1><%= @student.name %></h1>
+<h3><%= @student.mod %></h3>
+
+<br><% @student.ducks.each do |duck| %>
+  <% @student_duck = @student.ducks.find(duck.student_id) %> 
+    <%= link_to @student_duck.name, duck_path(@student_duck) %>
+<% end %> 
