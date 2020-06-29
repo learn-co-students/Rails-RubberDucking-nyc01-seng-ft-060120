@@ -1,0 +1,8 @@
+<h1><%= @duck.name %></h1>
+
+<p> Description: <%= @duck.description %></p>
+<p> Student: <%= link_to @duck.student.name, student_path(@duck.student) %> </p>
+
+<p><%= link_to "Edit", edit_duck_path%></p>
+<p><%= button_to "delete", @duck, :method => :delete %></p>
+

@@ -1,0 +1,9 @@
+<h1><%= @student.name %></h1>
+
+<p>Mod: <%= @student.mod %></p>
+<p>Ducks: <%= @student.duck_names.join(", ") %></p>
+
+<p> <%= link_to "Edit", edit_student_path %> </p>
+<p><%= button_to "delete", @student, :method => :delete %></p>
+
+
