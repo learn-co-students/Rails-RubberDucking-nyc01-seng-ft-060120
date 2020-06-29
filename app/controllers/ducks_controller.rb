@@ -14,8 +14,8 @@ class DucksController < ApplicationController
   end
 
   def create
-    @duck = Duck.create(params[:id])
-    redirect_to duck_path(@duck.id)
+    @duck = Duck.create(duck_params)
+    redirect_to duck_path(@duck)
   end
 
   def update
