@@ -1,0 +1,18 @@
+<h1>Bland Title</h1>
+<hr>
+
+<h2><%= @student.name %></h2>
+<h3>Mod <%= @student.mod %></h3>
+<hr>
+
+<h4>Ducks</h4>
+<ul>
+<% @ducks.each do |duck| %>
+  <li><%= link_to duck.name, duck_path(duck) %></li>
+<% end %>
+
+</ul>
+<hr>
+
+<p><%= link_to "edit", edit_student_path(@student) %></p>
+<p><%= link_to "Back to students", students_path %></p>

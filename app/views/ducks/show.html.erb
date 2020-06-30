@@ -1,0 +1,10 @@
+<h1>Duck Display</h1>
+<hr>
+<h3><%= @duck.name %></h3>
+<p>Description <br>
+<%= @duck.description %></p>
+<p>Student: <%= link_to @duck.student_name, student_path(@duck.student) %></p>
+
+<p><%= link_to "edit", edit_duck_path(@duck) %></p>
+
+<p><%= link_to "back to all ducks", ducks_path%></p>

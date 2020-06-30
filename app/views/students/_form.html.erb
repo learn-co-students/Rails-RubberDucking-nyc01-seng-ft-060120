@@ -1,0 +1,20 @@
+
+<% if flash[:errors] %>
+  
+  <% flash[:errors].each do |error| %>
+    <p><%= error %></p>
+  <% end %>
+  
+<% end %>
+
+
+<%= form_for @student do |f| %>
+  <p><%= f.label :name %>
+  <%= f.text_field :name, required: true%></p>
+  <p><%= f.label :mod %>
+  <%= f.number_field :mod, in: 1..6, required: true%></p>
+  <p><%= f.submit "Submit", disable_with: 'Submiting...' %></p>
+
+<% end %>
+
+<p><%= link_to "Back to students", students_path %></p>
