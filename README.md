@@ -8,9 +8,9 @@ Every rubber `duck` should be created with a `name` and a `description` and ever
 
 With this website, a user should be:
 
-* Able to see a list of all the students
+* [x] Able to see a list of all the students
 
-* Able to see a single student and all the ducks owned by that student
+* 1/2 Able to see a single student and all the ducks owned by that student
 
 * Able to log a new student (and make sure that their name is not blank/mod is between 1 and 5)
 
